@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "Playing with React",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot --progress --colors"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
