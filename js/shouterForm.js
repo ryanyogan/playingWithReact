@@ -1,25 +1,32 @@
-var Shouter = require('./shouter');
-var React   = require('react');
+import Shouter from './shouter';
+import React   from 'react';
 
-var ShouterForm = React.createClass({
-  getInitialState: function() {
-    return {
-      name: 'Ryan H.'
-    };
-  },
+const {
+  Component,
+} = React;
 
-  render: function() {
+class ShouterForm extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: 'Ryan H',
+    }
+  }
+
+  render () {
     return (
       <div className="hello-form">
-        <input type="text" onChange={this.onChange} />
+        <input type="text" onChange={this.onChange.bind(this)} />
         <Shouter name={this.state.name} />
       </div>
     );
-  },
+  }
 
-  onChange: function(event) {
+  onChange (event) {
     this.setState({ name: event.target.value });
   }
-});
+}
 
-module.exports = ShouterForm;
+export default ShouterForm;

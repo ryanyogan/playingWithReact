@@ -1,7 +1,11 @@
-var React = require('react');
+import React from 'react';
 
-var Shouter = React.createClass({
-  render: function() {
+const {
+  Component,
+} = React;
+
+class Shouter extends Component {
+  render () {
     return (
       <div>
         <p>Hello {this.props.name} !</p>
@@ -9,6 +13,6 @@ var Shouter = React.createClass({
       </div>
     );
   }
-});
+};
 
-module.exports = Shouter;
+export default Shouter;
