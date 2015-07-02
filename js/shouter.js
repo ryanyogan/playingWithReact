@@ -6,6 +6,6 @@ var Shouter = React.createClass({
       <p>Hello {this.props.name} !</p>
     );
   }
-}
+});
 
 module.exports = Shouter;

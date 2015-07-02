@@ -12,8 +12,15 @@ module.exports = {
       './js/helloworld.js'
     ])
   },
+
   output: {
     filename: 'public/[name].js'
+  },
+
+  module: {
+    loaders: [
+      { test: /\.js$/, loader: 'jsx', exclude: /node_modules/ }
+    ]
   }
 };
 
